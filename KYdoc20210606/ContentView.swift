@@ -67,7 +67,7 @@ struct ContentView: View {
                         HStack {
                             Text("（１）")
                             TextField("氏名を入力", text: $name1)
-                                .frame(width: 300)
+                                
                             Picker(selection: $sel1, label: Text(""), content: {
                                 Text("本田").tag(0)
                                 Text("山葉").tag(1)
@@ -78,7 +78,7 @@ struct ContentView: View {
                             
                             Text("（２）")
                             TextField("氏名を入力", text: $name2)
-                                .frame(width: 300)
+                                
                             Picker(selection: $sel2, label: Text(""), content: {
                                 Text("本田").tag(0)
                                 Text("山葉").tag(1)
@@ -91,7 +91,7 @@ struct ContentView: View {
                         HStack {
                             Text("（３）")
                             TextField("氏名を入力", text: $name3)
-                                .frame(width: 300)
+                               
                             Picker(selection: $sel3, label: Text(""), content: {
                                 Text("本田").tag(0)
                                 Text("山葉").tag(1)
@@ -101,7 +101,7 @@ struct ContentView: View {
                             })
                             Text("（４）")
                             TextField("氏名を入力", text: $name4)
-                                .frame(width: 300)
+                                
                             Picker(selection: $sel4, label: Text(""), content: {
                                 Text("本田").tag(0)
                                 Text("山葉").tag(1)
@@ -114,7 +114,7 @@ struct ContentView: View {
                         HStack {
                             Text("（５）")
                             TextField("氏名を入力", text: $name5)
-                                .frame(width: 300)
+                                
                             Picker(selection: $sel5, label: Text(""), content: {
                                 Text("本田").tag(0)
                                 Text("山葉").tag(1)
@@ -124,7 +124,7 @@ struct ContentView: View {
                             })
                             Text("（６）")
                             TextField("氏名を入力", text: $name6)
-                                .frame(width: 300)
+                                
                             Picker(selection: $sel6, label: Text(""), content: {
                                 Text("本田").tag(0)
                                 Text("山葉").tag(1)
@@ -166,84 +166,14 @@ struct ContentView: View {
                         TextField("作業内容をここに入力", text: $sagyo5)
                             .frame(width: 700)
                     }
-                    HStack {
-                        Text("危険予知洗い出し")
-                            .font(.title)
-                        Picker(selection: .constant(1), label: Text("選択")) {
-                            Text("新規").tag(1)
-                            Text("リストから").tag(2)
-                        }
-                    }
-                    .frame(width: 700)
                     
+                    KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
                     
-                    VStack {
-                        HStack {
-                            Text("（１）")
-                            TextField("危険予知をここに入力", text: $kiken1)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（２）")
-                            TextField("危険予知をここに入力", text: $kiken2)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（３）")
-                            TextField("危険予知をここに入力", text: $kiken3)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（４）")
-                            TextField("危険予知をここに入力", text: $kiken4)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（５）")
-                            TextField("危険予知をここに入力", text: $kiken5)
-                                .frame(width: 700)
-                        }
-                    }
-                    HStack {
-                        Text("安全対策")
-                            .font(.title)
-                        Picker(selection: .constant(1), label: Text("選択")) {
-                            Text("新規").tag(1)
-                            Text("リストから").tag(2)
-                        }
-                    }
-                    .frame(width: 700)
-                    
-                    VStack {
-                        HStack {
-                            Text("（１）")
-                            TextField("安全対策をここに入力", text: $anzen1)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（２）")
-                            TextField("安全対策をここに入力", text: $anzen2)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（３）")
-                            TextField("安全対策をここに入力", text: $anzen3)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（４）")
-                            TextField("安全対策をここに入力", text: $anzen4)
-                                .frame(width: 700)
-                        }
-                        HStack {
-                            Text("（５）")
-                            TextField("安全対策をここに入力", text: $anzen5)
-                                .frame(width: 700)
-                        }
-                    }
-                        }
+                    AnzenTaisakuView(anzen1: $anzen1, anzen2: $anzen2, anzen3: $anzen3, anzen4: $anzen4, anzen5: $anzen5)
                 
-            }
+                    }
+                
+                }
             }
             
         .navigationViewStyle(StackNavigationViewStyle())

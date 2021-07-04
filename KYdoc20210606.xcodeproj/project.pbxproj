@@ -13,6 +13,8 @@
 		EB4A761F266CD16200289489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4A761E266CD16200289489 /* Assets.xcassets */; };
 		EB4A7622266CD16200289489 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4A7621266CD16200289489 /* Preview Assets.xcassets */; };
 		EB4A7625266CD16200289489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A7623266CD16200289489 /* LaunchScreen.storyboard */; };
+		EB56A8302691AE8B0060F7D8 /* KikenAridashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A82F2691AE8B0060F7D8 /* KikenAridashiView.swift */; };
+		EB56A8322691B2480060F7D8 /* AnzenTaisakuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */; };
 		EB73EFED267617FD00FC50F2 /* KYList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73EFEC267617FD00FC50F2 /* KYList.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		EB4A7621266CD16200289489 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB4A7624266CD16200289489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB4A7626266CD16200289489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB56A82F2691AE8B0060F7D8 /* KikenAridashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KikenAridashiView.swift; sourceTree = "<group>"; };
+		EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnzenTaisakuView.swift; sourceTree = "<group>"; };
 		EB73EFEC267617FD00FC50F2 /* KYList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +65,8 @@
 				EB4A7618266CD16000289489 /* AppDelegate.swift */,
 				EB4A761A266CD16000289489 /* SceneDelegate.swift */,
 				EB4A761C266CD16000289489 /* ContentView.swift */,
+				EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */,
+				EB56A82F2691AE8B0060F7D8 /* KikenAridashiView.swift */,
 				EB73EFEC267617FD00FC50F2 /* KYList.swift */,
 				EB4A761E266CD16200289489 /* Assets.xcassets */,
 				EB4A7623266CD16200289489 /* LaunchScreen.storyboard */,
@@ -150,7 +156,9 @@
 			files = (
 				EB4A7619266CD16000289489 /* AppDelegate.swift in Sources */,
 				EB4A761B266CD16000289489 /* SceneDelegate.swift in Sources */,
+				EB56A8302691AE8B0060F7D8 /* KikenAridashiView.swift in Sources */,
 				EB4A761D266CD16000289489 /* ContentView.swift in Sources */,
+				EB56A8322691B2480060F7D8 /* AnzenTaisakuView.swift in Sources */,
 				EB73EFED267617FD00FC50F2 /* KYList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
