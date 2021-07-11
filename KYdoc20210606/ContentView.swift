@@ -143,29 +143,7 @@ struct ContentView: View {
                             .font(.title)
                     }
                     
-                    VStack {
-                        HStack {
-                            Text("作業内容")
-                                .font(.title)
-                                .padding()
-                            Picker(selection: .constant(1), label: Text("選択")) {
-                                Text("新規").tag(1)
-                                Text("リストから").tag(2)
-                            }
-                            
-                        }
-                        .frame(width: 700)
-                        TextField("作業内容をここに入力", text: $sagyo1)
-                            .frame(width: 700)
-                        TextField("作業内容をここに入力", text: $sagyo2)
-                            .frame(width: 700)
-                        TextField("作業内容をここに入力", text: $sagyo3)
-                            .frame(width: 700)
-                        TextField("作業内容をここに入力", text: $sagyo4)
-                            .frame(width: 700)
-                        TextField("作業内容をここに入力", text: $sagyo5)
-                            .frame(width: 700)
-                    }
+                    SgyonaiyouView(sgyonaiyou1: $sagyo1, sagyonaiyo)
                     
                     KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
                     
