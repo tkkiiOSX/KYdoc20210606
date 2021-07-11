@@ -54,87 +54,8 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                VStack(spacing: 34.0) {
-                    NavigationLink(destination: KYList()) {
-                        Text("危険予知リスト")
-                            .font(.largeTitle)
-                    }
-                    VStack {
-                        Text("危険予知＆対策記録")
-                            .font(.largeTitle)
-                        Text("参加者氏名")
-                            .font(.title)
-                        HStack {
-                            Text("（１）")
-                            TextField("氏名を入力", text: $name1)
-                                
-                            Picker(selection: $sel1, label: Text(""), content: {
-                                Text("本田").tag(0)
-                                Text("山葉").tag(1)
-                                Text("川崎").tag(2)
-                                Text("鈴木").tag(3)
-                                Text("新規入力").tag(4)
-                            })
-                            
-                            Text("（２）")
-                            TextField("氏名を入力", text: $name2)
-                                
-                            Picker(selection: $sel2, label: Text(""), content: {
-                                Text("本田").tag(0)
-                                Text("山葉").tag(1)
-                                Text("川崎").tag(2)
-                                Text("鈴木").tag(3)
-                                Text("新規入力").tag(4)
-                            })
-                            
-                        }
-                        HStack {
-                            Text("（３）")
-                            TextField("氏名を入力", text: $name3)
-                               
-                            Picker(selection: $sel3, label: Text(""), content: {
-                                Text("本田").tag(0)
-                                Text("山葉").tag(1)
-                                Text("川崎").tag(2)
-                                Text("鈴木").tag(3)
-                                Text("新規入力").tag(4)
-                            })
-                            Text("（４）")
-                            TextField("氏名を入力", text: $name4)
-                                
-                            Picker(selection: $sel4, label: Text(""), content: {
-                                Text("本田").tag(0)
-                                Text("山葉").tag(1)
-                                Text("川崎").tag(2)
-                                Text("鈴木").tag(3)
-                                Text("新規入力").tag(4)
-                            })
-                        }
-                        
-                        HStack {
-                            Text("（５）")
-                            TextField("氏名を入力", text: $name5)
-                                
-                            Picker(selection: $sel5, label: Text(""), content: {
-                                Text("本田").tag(0)
-                                Text("山葉").tag(1)
-                                Text("川崎").tag(2)
-                                Text("鈴木").tag(3)
-                                Text("新規入力").tag(4)
-                            })
-                            Text("（６）")
-                            TextField("氏名を入力", text: $name6)
-                                
-                            Picker(selection: $sel6, label: Text(""), content: {
-                                Text("本田").tag(0)
-                                Text("山葉").tag(1)
-                                Text("川崎").tag(2)
-                                Text("鈴木").tag(3)
-                                Text("新規入力").tag(4)
-                            })
-                        }
-                        
-                    }
+                VStack {
+
                     HStack {
                         Text("日時")
                             .font(.title)
@@ -142,17 +63,21 @@ struct ContentView: View {
                             .padding()
                             .font(.title)
                     }
-                    
-                    SgyonaiyouView(sgyonaiyou1: $sagyo1, sagyonaiyo)
+                    NameIView(name1: $name1, name2: $name2, name3: $name3, name4: $name4, name5: $name5, name6: $name6,
+
+                             sel1: $sel1, sel2: $sel2, sel3: $sel3, sel4: $sel4, sel5: $sel5, sel6: $sel6)
+
+                    SgyonaiyouView(sagyo1: $sagyo1, sagyo2: $sagyo2, sagyo3: $sagyo3, sagyo4: $anzen4, sagyo5: $anzen5)
                     
                     KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
                     
                     AnzenTaisakuView(anzen1: $anzen1, anzen2: $anzen2, anzen3: $anzen3, anzen4: $anzen4, anzen5: $anzen5)
                 
                     }
-                
+                .padding(.all,20)
                 }
-            }
+            .navigationTitle("危険予知＆対策記録")
+        }
             
         .navigationViewStyle(StackNavigationViewStyle())
                     

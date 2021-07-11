@@ -16,7 +16,7 @@
 		EB56A8302691AE8B0060F7D8 /* KikenAridashiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A82F2691AE8B0060F7D8 /* KikenAridashiView.swift */; };
 		EB56A8322691B2480060F7D8 /* AnzenTaisakuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */; };
 		EB56A8342691C74A0060F7D8 /* SgyonaiyouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A8332691C74A0060F7D8 /* SgyonaiyouView.swift */; };
-		EB73EFED267617FD00FC50F2 /* KYList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73EFEC267617FD00FC50F2 /* KYList.swift */; };
+		EB7A8FD9269AF5AA008E4076 /* NameIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A8FD8269AF5AA008E4076 /* NameIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		EB56A82F2691AE8B0060F7D8 /* KikenAridashiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KikenAridashiView.swift; sourceTree = "<group>"; };
 		EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnzenTaisakuView.swift; sourceTree = "<group>"; };
 		EB56A8332691C74A0060F7D8 /* SgyonaiyouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SgyonaiyouView.swift; sourceTree = "<group>"; };
-		EB73EFEC267617FD00FC50F2 /* KYList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYList.swift; sourceTree = "<group>"; };
+		EB7A8FD8269AF5AA008E4076 /* NameIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +67,10 @@
 				EB4A7618266CD16000289489 /* AppDelegate.swift */,
 				EB4A761A266CD16000289489 /* SceneDelegate.swift */,
 				EB4A761C266CD16000289489 /* ContentView.swift */,
+				EB7A8FD8269AF5AA008E4076 /* NameIView.swift */,
 				EB56A8332691C74A0060F7D8 /* SgyonaiyouView.swift */,
 				EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */,
 				EB56A82F2691AE8B0060F7D8 /* KikenAridashiView.swift */,
-				EB73EFEC267617FD00FC50F2 /* KYList.swift */,
 				EB4A761E266CD16200289489 /* Assets.xcassets */,
 				EB4A7623266CD16200289489 /* LaunchScreen.storyboard */,
 				EB4A7626266CD16200289489 /* Info.plist */,
@@ -163,7 +163,7 @@
 				EB56A8302691AE8B0060F7D8 /* KikenAridashiView.swift in Sources */,
 				EB4A761D266CD16000289489 /* ContentView.swift in Sources */,
 				EB56A8322691B2480060F7D8 /* AnzenTaisakuView.swift in Sources */,
-				EB73EFED267617FD00FC50F2 /* KYList.swift in Sources */,
+				EB7A8FD9269AF5AA008E4076 /* NameIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,33 +25,33 @@ struct AnzenTaisakuView: View {
                     Text("リストから").tag(2)
                 }
             }
-            .frame(width: 700)
+            
             
             VStack {
                 HStack {
                     Text("（１）")
                     TextField("安全対策をここに入力", text: $anzen1)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（２）")
                     TextField("安全対策をここに入力", text: $anzen2)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（３）")
                     TextField("安全対策をここに入力", text: $anzen3)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（４）")
                     TextField("安全対策をここに入力", text: $anzen4)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（５）")
                     TextField("安全対策をここに入力", text: $anzen5)
-                        .frame(width: 700)
+                        
                 }
             }
             

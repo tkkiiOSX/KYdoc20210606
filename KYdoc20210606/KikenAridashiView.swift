@@ -25,33 +25,33 @@ struct KikenAridashiView: View {
                     Text("リストから").tag(2)
                 }
             }
-            .frame(width: 700)
+            
             
             VStack {
                 HStack {
                     Text("（１）")
                     TextField("危険予知をここに入力", text: $kiken1)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（２）")
                     TextField("危険予知をここに入力", text: $kiken2)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（３）")
                     TextField("危険予知をここに入力", text: $kiken3)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（４）")
                     TextField("危険予知をここに入力", text: $kiken4)
-                        .frame(width: 700)
+
                 }
                 HStack {
                     Text("（５）")
                     TextField("危険予知をここに入力", text: $kiken5)
-                        .frame(width: 700)
+                        
                 }
             }
         }
