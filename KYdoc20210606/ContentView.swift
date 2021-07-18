@@ -54,8 +54,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                VStack {
-
                     HStack {
                         Text("日時")
                             .font(.title)
@@ -72,10 +70,9 @@ struct ContentView: View {
                     KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
                     
                     AnzenTaisakuView(anzen1: $anzen1, anzen2: $anzen2, anzen3: $anzen3, anzen4: $anzen4, anzen5: $anzen5)
-                
-                    }
-                .padding(.all,20)
+
                 }
+            .padding(.all,20)
             .navigationTitle("危険予知＆対策記録")
         }
             
