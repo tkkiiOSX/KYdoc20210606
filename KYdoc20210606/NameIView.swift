@@ -33,7 +33,7 @@ struct NameIView: View {
                 .font(.title)
 
             NavigationLink(destination: InputNameView()) {
-                Text("名前入力")
+                Text("名前選択")
             }
         }
 

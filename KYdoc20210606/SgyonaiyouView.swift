@@ -18,43 +18,13 @@ struct SgyonaiyouView: View {
     var body: some View {
 
         VStack {
-            HStack {
+
                 Text("作業内容")
                     .font(.title)
-                    
-                Picker(selection: .constant(1), label: Text("選択")) {
-                    Text("新規").tag(1)
-                    Text("リストから").tag(2)
-                }
 
-            }
-            VStack{
-                HStack{
-                    Text("（１）")
-                    TextField("作業内容をここに入力", text: $sagyo1)
+                NavigationLink(destination: InputSgyonaiyouView()) {
+                    Text("作業項目選択")
                 }
-                HStack{
-                    Text("（２）")
-                    TextField("作業内容をここに入力", text: $sagyo2)
-                }
-                HStack {
-                    Text("（３）")
-                    TextField("作業内容をここに入力", text: $sagyo3)
-                }
-                HStack{
-                    Text("（４）")
-                    TextField("作業内容をここに入力", text: $sagyo4)
-                }
-
-                HStack{
-                    Text("（５）")
-                    TextField("作業内容をここに入力", text: $sagyo5)
-                }
-
-            }
-
-               
-            
         }
     }
 }

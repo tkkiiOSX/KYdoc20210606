@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var names = ["鈴木", "田中", "佐藤"]
+var names = ["鈴木太郎（A)", "田中太郎（B)", "佐藤花子（O)"]
 
 struct InputNameView: View {
     var body: some View {
@@ -19,7 +19,7 @@ struct InputNameView: View {
                     }
                 }
             }
-            Section(header: Text("追加")) {
+            Section(header: Text("名前（血液型）追加")) {
                 Button(action: {}) {
                     Text("＋")
                 }

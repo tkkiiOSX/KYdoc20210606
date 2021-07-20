@@ -17,49 +17,13 @@ struct KikenAridashiView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Text("危険予知洗い出し")
-                    .font(.title)
-                Picker(selection: .constant(1), label: Text("選択")) {
-                    Text("新規").tag(1)
-                    Text("リストから").tag(2)
-                }
-            }
-            
-            
-            VStack {
-                HStack {
-                    Text("（１）")
-                    TextField("危険予知をここに入力", text: $kiken1)
+            Text("危険予知洗い出し")
+                .font(.title)
 
-                }
-                HStack {
-                    Text("（２）")
-                    TextField("危険予知をここに入力", text: $kiken2)
-
-                }
-                HStack {
-                    Text("（３）")
-                    TextField("危険予知をここに入力", text: $kiken3)
-
-                }
-                HStack {
-                    Text("（４）")
-                    TextField("危険予知をここに入力", text: $kiken4)
-
-                }
-                HStack {
-                    Text("（５）")
-                    TextField("危険予知をここに入力", text: $kiken5)
-                        
-                }
+            NavigationLink(destination: InputKikenAridashiIView()) {
+                Text("危険項目選択")
             }
         }
-        
-        
-        
-        
-
     }
 }
 
