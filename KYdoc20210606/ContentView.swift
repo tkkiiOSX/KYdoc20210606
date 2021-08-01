@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var name1: String = ""
-    @State var name2: String = ""
-    @State var name3: String = ""
-    @State var name4: String = ""
-    @State var name5: String = ""
-    @State var name6: String = ""
-    
+
     @State var nichiji: Date = Date()
-    
+
+    //@State var nameData: String = ""
+
+    @State var tourokuname: [String] = [
+    ]
+    @State var nameData: [String] = [
+        "岡本太郎",
+        "黒澤明"
+    ]
     @State var sagyo1: String = ""
     @State var sagyo2: String = ""
     @State var sagyo3: String = ""
@@ -61,9 +62,10 @@ struct ContentView: View {
                             .padding()
                             .font(.title)
                     }
-                    NameIView(name1: $name1, name2: $name2, name3: $name3, name4: $name4, name5: $name5, name6: $name6,
+                NameIView(nameData: $nameData)
+                    /*NameIView(name1: $name1, name2: $name2, name3: $name3, name4: $name4, name5: $name5, name6: $name6,
 
-                             sel1: $sel1, sel2: $sel2, sel3: $sel3, sel4: $sel4, sel5: $sel5, sel6: $sel6)
+                             sel1: $sel1, sel2: $sel2, sel3: $sel3, sel4: $sel4, sel5: $sel5, sel6: $sel6)*/
 
                     SgyonaiyouView(sagyo1: $sagyo1, sagyo2: $sagyo2, sagyo3: $sagyo3, sagyo4: $anzen4, sagyo5: $anzen5)
                     

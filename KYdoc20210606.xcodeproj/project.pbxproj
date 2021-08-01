@@ -21,6 +21,7 @@
 		EB56A8322691B2480060F7D8 /* AnzenTaisakuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */; };
 		EB56A8342691C74A0060F7D8 /* SgyonaiyouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56A8332691C74A0060F7D8 /* SgyonaiyouView.swift */; };
 		EB7A8FD9269AF5AA008E4076 /* NameIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7A8FD8269AF5AA008E4076 /* NameIView.swift */; };
+		EB7AC5CF26B6877E00DB72F9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7AC5CE26B6877E00DB72F9 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EB56A8312691B2480060F7D8 /* AnzenTaisakuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnzenTaisakuView.swift; sourceTree = "<group>"; };
 		EB56A8332691C74A0060F7D8 /* SgyonaiyouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SgyonaiyouView.swift; sourceTree = "<group>"; };
 		EB7A8FD8269AF5AA008E4076 /* NameIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameIView.swift; sourceTree = "<group>"; };
+		EB7AC5CE26B6877E00DB72F9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				EB4A7623266CD16200289489 /* LaunchScreen.storyboard */,
 				EB4A7626266CD16200289489 /* Info.plist */,
 				EB4A7620266CD16200289489 /* Preview Content */,
+				EB7AC5CE26B6877E00DB72F9 /* Data.swift */,
 			);
 			path = KYdoc20210606;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				EB4A761B266CD16000289489 /* SceneDelegate.swift in Sources */,
 				EB56A8302691AE8B0060F7D8 /* KikenAridashiView.swift in Sources */,
 				EB4A761D266CD16000289489 /* ContentView.swift in Sources */,
+				EB7AC5CF26B6877E00DB72F9 /* Data.swift in Sources */,
 				EB314CDB26A69382002C6906 /* InputSgyonaiyouView.swift in Sources */,
 				EB314CDF26A699C3002C6906 /* InputAnzenTaisakuView.swift in Sources */,
 				EB56A8322691B2480060F7D8 /* AnzenTaisakuView.swift in Sources */,
