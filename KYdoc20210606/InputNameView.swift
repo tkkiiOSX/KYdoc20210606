@@ -16,37 +16,37 @@ struct InputNameView: View {
     @State var name: String = ""
 
     var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    ForEach(0 ..< data.now_name.count, id: \.self) {index in
-                        Text(data.now_name[index])
+        Form {
+            Section {
+                ForEach(0 ..< data.now_name.count, id: \.self) {index in
+                    Text(data.now_name[index])
+                }
+            }
+            Section {
+                Picker(selection: $selNum, label: Text("名前リストから選択")) {
+                    ForEach(0 ..< data.dic_name.count, id: \.self) {index in
+                        Text(data.dic_name[index])
                     }
                 }
-                Section {
-                    Picker(selection: $selNum, label: Text("名前リストから選択")) {
-                        ForEach(0 ..< data.dic_name.count, id: \.self) {index in
-                            Text(data.dic_name[index])
-                        }
-                    }
-                    Button(action: {
-                        data.now_name.append(data.dic_name[selNum])
-                    }, label: {
-                        Text("リストで選択した名前を登録")
-                    })
-                }
-                Section {
-                    TextField("名前（血液型）追加", text: $name)
-                    Button(action: {
+                Button(action: {
+                    data.now_name.append(data.dic_name[selNum])
+                }, label: {
+                    Text("リストで選択した名前を登録")
+                })
+            }
+            Section {
+                TextField("名前（血液型）追加", text: $name)
+                Button(action: {
+                    if name != "" {
                         data.dic_name.append(name)
                         name = ""
-                    }) {
-                        Text("リストへの新規追加")
                     }
+
+                }) {
+                    Text("リストへの新規追加")
                 }
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

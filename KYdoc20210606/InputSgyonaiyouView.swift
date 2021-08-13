@@ -7,30 +7,48 @@
 
 import SwiftUI
 
-var names2 = ["運搬", "設置", "取り付け"]
-
 struct InputSgyonaiyouView: View {
+    @ObservedObject var data: Data
+
+    @State var selNum: Int = 0
+    @State var sagyo: String = ""
+
     var body: some View {
         Form {
-            Section(header: Text("登録済み")) {
-                ForEach(0 ..< names2.count) {index in
-                    Button(action: {}) {
-                        Text(names2[index])
+            Section {
+                ForEach(0 ..< data.now_sagyo.count,id:\.self) {index in
+                    Text(data.now_sagyo[index])
+                }
+            }
+            Section{
+                Picker(selection: $selNum, label: Text("作業リストから選択")){
+                    ForEach(0 ..< data.dic_sagyo.count,id:\.self){index in
+                        Text(data.dic_sagyo[index])
                     }
                 }
+                Button(action: {
+                    data.now_sagyo.append(data.dic_sagyo[selNum])
+                }, label: {
+                    Text("リストで選択した作業内容を登録")
+                })
             }
-            Section(header: Text("作業項目追加")) {
-                Button(action: {}) {
-                    Text("＋")
-                }
-            }
+            Section{
+                TextField("作業項目追加",text: $sagyo)
+                Button(action: {
+                    if sagyo != "" {
+                        data.dic_sagyo.append(sagyo)
+                        sagyo = ""
+                    }
 
+                }, label: {
+                    Text("リストへの新規追加")
+                })
+            }
         }
     }
 }
-
 struct InputSgyonaiyouView_Previews: PreviewProvider {
     static var previews: some View {
-        InputSgyonaiyouView()
+        InputSgyonaiyouView(data: Data())
     }
 }

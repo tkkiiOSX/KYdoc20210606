@@ -8,29 +8,27 @@
 import SwiftUI
 
 struct SgyonaiyouView: View {
-
-    @Binding var sagyo1: String
-    @Binding var sagyo2: String
-    @Binding var sagyo3: String
-    @Binding var sagyo4: String
-    @Binding var sagyo5: String
-
+    @ObservedObject var data: Data
+    
     var body: some View {
 
         VStack {
-
                 Text("作業内容")
-                    .font(.title)
 
-                NavigationLink(destination: InputSgyonaiyouView()) {
+            ForEach(0 ..< data.now_sagyo.count, id: \.self) {index in
+                Text(data.now_sagyo[index])
+            }
+
+            NavigationLink(destination: InputSgyonaiyouView(data:data)) {
                     Text("作業項目選択")
                 }
         }
+        .font(.title)
     }
 }
 struct SgyonaiyouView_Previews: PreviewProvider {
     static var previews: some View {
-        SgyonaiyouView(sagyo1: .constant("a"), sagyo2: .constant("b"), sagyo3: .constant("c"), sagyo4: .constant("d"), sagyo5: .constant("c"))
+        SgyonaiyouView(data: Data())
     }
 }
 

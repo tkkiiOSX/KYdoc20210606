@@ -61,7 +61,7 @@ struct ContentView: View {
                     Text(dateF.string(from: nichiji))
                 }
                 NameIView(data: data)
-                SgyonaiyouView(sagyo1: $sagyo1, sagyo2: $sagyo2, sagyo3: $sagyo3, sagyo4: $anzen4, sagyo5: $anzen5)
+                SgyonaiyouView(data: data)
                 KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
                 AnzenTaisakuView(anzen1: $anzen1, anzen2: $anzen2, anzen3: $anzen3, anzen4: $anzen4, anzen5: $anzen5)
             }
