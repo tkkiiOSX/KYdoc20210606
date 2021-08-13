@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @ObservedObject var data = Data()
+    
     @State var nichiji: Date = Date()
 
     //@State var nameData: String = ""
@@ -55,6 +56,24 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
+                HStack {
+                    Text("日時")
+                    Text(dateF.string(from: nichiji))
+                }
+                NameIView(data: data)
+                SgyonaiyouView(sagyo1: $sagyo1, sagyo2: $sagyo2, sagyo3: $sagyo3, sagyo4: $anzen4, sagyo5: $anzen5)
+                KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
+                AnzenTaisakuView(anzen1: $anzen1, anzen2: $anzen2, anzen3: $anzen3, anzen4: $anzen4, anzen5: $anzen5)
+            }
+            .font(.title)
+
+            .navigationTitle("危険予知＆対策記録")
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
+        
+/*
+        NavigationView {
+            Form {
                     HStack {
                         Text("日時")
                             .font(.title)
@@ -79,6 +98,8 @@ struct ContentView: View {
         }
             
         .navigationViewStyle(StackNavigationViewStyle())
+ 
+ */
                     
     }
 }

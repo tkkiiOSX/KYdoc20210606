@@ -76,6 +76,7 @@
 			children = (
 				EB4A7618266CD16000289489 /* AppDelegate.swift */,
 				EB4A761A266CD16000289489 /* SceneDelegate.swift */,
+				EB7AC5CE26B6877E00DB72F9 /* Data.swift */,
 				EB4A761C266CD16000289489 /* ContentView.swift */,
 				EB7A8FD8269AF5AA008E4076 /* NameIView.swift */,
 				EB28EFE126A435FD00080028 /* InputNameView.swift */,
@@ -89,7 +90,6 @@
 				EB4A7623266CD16200289489 /* LaunchScreen.storyboard */,
 				EB4A7626266CD16200289489 /* Info.plist */,
 				EB4A7620266CD16200289489 /* Preview Content */,
-				EB7AC5CE26B6877E00DB72F9 /* Data.swift */,
 			);
 			path = KYdoc20210606;
 			sourceTree = "<group>";

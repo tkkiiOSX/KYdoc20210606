@@ -8,45 +8,26 @@
 import SwiftUI
 
 struct NameIView: View {
-
-    @Binding var tourokuname: [String]
-    @Binding var nameData: [String]
-
-    //@Binding var nameData: String
-
-    /*@Binding var name1: String
-    @Binding var name2: String
-    @Binding var name3: String
-    @Binding var name4: String
-    @Binding var name5: String
-    @Binding var name6: String*/
-
-    /*@Binding var sel1: Int
-    @Binding var sel2: Int
-    @Binding var sel3: Int
-    @Binding var sel4: Int
-    @Binding var sel5: Int
-    @Binding var sel6: Int*/
-
+    @ObservedObject var data: Data
+    
     var body: some View {
         VStack {
             Text("参加者氏名")
-                .font(.title)
-            ForEach(0 ..< tourokuname.count) {i in
-                Text(tourokuname[i])
+
+            ForEach(0 ..< data.now_name.count, id: \.self) {index in
+                Text(data.now_name[index])
             }
-            NavigationLink(destination: InputNameView(tourokuname: $tourokuname, nameData: $nameData)) {
+
+            NavigationLink(destination: InputNameView(data: data)) {
                 Text("名前選択")
             }
         }
-
+        .font(.title)
     }
 }
 
 struct NameIView_Previews: PreviewProvider {
     static var previews: some View {
-        NameIView(tourokuname: .constant([]), nameData: .constant([]))
-
-        /*NameIView(name1: .constant("a"), name2: .constant("a"), name3: .constant("a"), name4: .constant("a"), name5: .constant("a"), name6: .constant("a"), sel1: .constant(0), sel2: .constant(0), sel3: .constant(0), sel4: .constant(0), sel5: .constant(0), sel6: .constant(0))*/
+        NameIView(data: Data())
     }
 }
