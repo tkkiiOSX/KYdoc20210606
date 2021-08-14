@@ -7,22 +7,40 @@
 
 import SwiftUI
 
-var names3 = ["落下の危険", "転倒の危険", "固定忘れ"]
-
 struct InputKikenAridashiIView: View {
-    var body: some View {
 
+    @ObservedObject var data: Data
+
+    @State var selNum: Int = 0
+    @State var kiken: String = ""
+
+    var body: some View {
         Form {
-            Section(header: Text("登録済み")) {
-                ForEach(0 ..< names3.count) {index in
-                    Button(action: {}) {
-                        Text(names3[index])
+            Section {
+                ForEach(0 ..< data.now_kiken.count, id: \.self) {index in
+                        Text(data.now_kiken[index])
                     }
                 }
+            Section {
+                Picker(selection: $selNum, label: Text("危険予知項目リストから選択")) {
+                ForEach(0 ..< data.dic_kiken.count, id: \.self) {index in
+                        Text(data.dic_kiken[index])
+                }
             }
-            Section(header: Text("危険予想追加")) {
-                Button(action: {}) {
-                    Text("＋")
+
+            Button(action: {
+                    data.now_kiken.append(data.dic_kiken[selNum])
+                }, label: {
+                    Text("危険予知項目リストで選択した危険予知項目を登録")
+                })
+            }
+            Section {
+                TextField("危険予知項目追加", text: $kiken)
+                Button(action: {
+                    data.dic_kiken.append(kiken)
+                    kiken = ""
+                }) {
+                    Text("危険予知項目リストへの新規追加")
                 }
             }
 
@@ -33,6 +51,6 @@ struct InputKikenAridashiIView: View {
 
 struct InputKikenAridashiIView_Previews: PreviewProvider {
     static var previews: some View {
-        InputKikenAridashiIView()
+        InputKikenAridashiIView(data: Data())
     }
 }

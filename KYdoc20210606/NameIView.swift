@@ -19,7 +19,7 @@ struct NameIView: View {
             }
 
             NavigationLink(destination: InputNameView(data: data)) {
-                Text("名前選択")
+                Text("名前を選択")
             }
         }
         .font(.title)

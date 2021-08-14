@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-//var names = ["鈴木太郎（A)", "田中太郎（B)", "佐藤花子（O)"]
-
 struct InputNameView: View {
     @ObservedObject var data: Data
     
@@ -23,7 +21,7 @@ struct InputNameView: View {
                 }
             }
             Section {
-                Picker(selection: $selNum, label: Text("名前リストから選択")) {
+                Picker(selection: $selNum, label: Text("名前をリストから選択")) {
                     ForEach(0 ..< data.dic_name.count, id: \.self) {index in
                         Text(data.dic_name[index])
                     }
@@ -31,7 +29,7 @@ struct InputNameView: View {
                 Button(action: {
                     data.now_name.append(data.dic_name[selNum])
                 }, label: {
-                    Text("リストで選択した名前を登録")
+                    Text("名前リストで選択した名前を登録")
                 })
             }
             Section {
@@ -43,7 +41,7 @@ struct InputNameView: View {
                     }
 
                 }) {
-                    Text("リストへの新規追加")
+                    Text("名前リストへの新規追加")
                 }
             }
         }

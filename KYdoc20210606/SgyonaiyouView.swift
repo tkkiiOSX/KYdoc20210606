@@ -13,14 +13,14 @@ struct SgyonaiyouView: View {
     var body: some View {
 
         VStack {
-                Text("作業内容")
+                Text("作業項目")
 
             ForEach(0 ..< data.now_sagyo.count, id: \.self) {index in
                 Text(data.now_sagyo[index])
             }
 
             NavigationLink(destination: InputSgyonaiyouView(data:data)) {
-                    Text("作業項目選択")
+                    Text("作業項目を選択")
                 }
         }
         .font(.title)

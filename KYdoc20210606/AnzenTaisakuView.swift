@@ -8,27 +8,26 @@
 import SwiftUI
 
 struct AnzenTaisakuView: View {
-    
-    @Binding var anzen1: String
-    @Binding var anzen2: String
-    @Binding var anzen3: String
-    @Binding var anzen4: String
-    @Binding var anzen5: String
-    
+    @ObservedObject var data: Data
+
     var body: some View {
         VStack {
-            Text("安全対策")
-                .font(.title)
+            Text("安全対策項目")
 
-            NavigationLink(destination: InputAnzenTaisakuView()) {
-                Text("安全対策選択")
+            ForEach(0 ..< data.now_anzen.count, id: \.self) {index in
+                            Text(data.now_anzen[index])
+            }
+                NavigationLink(destination: InputAnzenTaisakuView(data: data)) {
+                Text("安全対策項目を選択")
+            }
         }
+        .font(.title)
     }
 }
 
 struct AnzenTaisakuView_Previews: PreviewProvider {
     static var previews: some View {
-        AnzenTaisakuView(anzen1: .constant("a"), anzen2: .constant("b"), anzen3: .constant("c"), anzen4: .constant("d"), anzen5: .constant("e"))
+        AnzenTaisakuView(data: Data())
     }
 }
-}
+

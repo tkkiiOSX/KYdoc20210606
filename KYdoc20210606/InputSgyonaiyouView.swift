@@ -21,7 +21,7 @@ struct InputSgyonaiyouView: View {
                 }
             }
             Section{
-                Picker(selection: $selNum, label: Text("作業リストから選択")){
+                Picker(selection: $selNum, label: Text("作業項目をリストから選択")){
                     ForEach(0 ..< data.dic_sagyo.count,id:\.self){index in
                         Text(data.dic_sagyo[index])
                     }
@@ -29,11 +29,11 @@ struct InputSgyonaiyouView: View {
                 Button(action: {
                     data.now_sagyo.append(data.dic_sagyo[selNum])
                 }, label: {
-                    Text("リストで選択した作業内容を登録")
+                    Text("作業項目リストで選択した作業項目を登録")
                 })
             }
             Section{
-                TextField("作業項目追加",text: $sagyo)
+                TextField("作業項目を追加",text: $sagyo)
                 Button(action: {
                     if sagyo != "" {
                         data.dic_sagyo.append(sagyo)
@@ -41,7 +41,7 @@ struct InputSgyonaiyouView: View {
                     }
 
                 }, label: {
-                    Text("リストへの新規追加")
+                    Text("作業項目リストへの新規追加")
                 })
             }
         }

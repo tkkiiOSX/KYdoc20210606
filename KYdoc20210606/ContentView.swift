@@ -20,7 +20,7 @@ struct ContentView: View {
         "岡本太郎",
         "黒澤明"
     ]
-    @State var sagyo1: String = ""
+    /*@State var sagyo1: String = ""
     @State var sagyo2: String = ""
     @State var sagyo3: String = ""
     @State var sagyo4: String = ""
@@ -43,7 +43,7 @@ struct ContentView: View {
     @State var sel3 = 0
     @State var sel4 = 0
     @State var sel5 = 0
-    @State var sel6 = 0
+    @State var sel6 = 0*/
     
     var dateF: DateFormatter {
         let f = DateFormatter()
@@ -62,8 +62,8 @@ struct ContentView: View {
                 }
                 NameIView(data: data)
                 SgyonaiyouView(data: data)
-                KikenAridashiView(kiken1: $kiken1, kiken2: $kiken2, kiken3: $kiken3, kiken4: $kiken4, kiken5: $kiken5)
-                AnzenTaisakuView(anzen1: $anzen1, anzen2: $anzen2, anzen3: $anzen3, anzen4: $anzen4, anzen5: $anzen5)
+                KikenAridashiView(data: data)
+                AnzenTaisakuView(data: data)
             }
             .font(.title)
 
