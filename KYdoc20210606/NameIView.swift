@@ -19,6 +19,7 @@ struct NameIView: View {
             }
 
             NavigationLink(destination: InputNameView(data: data)) {
+                
                 Text("名前を選択")
             }
         }

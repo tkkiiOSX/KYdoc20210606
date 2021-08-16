@@ -19,6 +19,8 @@ struct InputKikenAridashiIView: View {
             Section {
                 ForEach(0 ..< data.now_kiken.count, id: \.self) {index in
                         Text(data.now_kiken[index])
+                    }.onDelete { offsets in
+                        self.data.now_kiken.remove(atOffsets: offsets)
                     }
                 }
             Section {

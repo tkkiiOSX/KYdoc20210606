@@ -18,10 +18,13 @@ struct InputNameView: View {
             Section {
                 ForEach(0 ..< data.now_name.count, id: \.self) {index in
                     Text(data.now_name[index])
+                }.onDelete { offsets in
+                    self.data.now_name.remove(atOffsets: offsets)
                 }
             }
             Section {
-                Picker(selection: $selNum, label: Text("名前をリストから選択")) {
+                Picker(selection: $selNum, label:
+                        Text("名前をリストから選択")) {
                     ForEach(0 ..< data.dic_name.count, id: \.self) {index in
                         Text(data.dic_name[index])
                     }

@@ -18,6 +18,8 @@ struct InputSgyonaiyouView: View {
             Section {
                 ForEach(0 ..< data.now_sagyo.count,id:\.self) {index in
                     Text(data.now_sagyo[index])
+                }.onDelete { offsets in
+                    self.data.now_sagyo.remove(atOffsets: offsets)
                 }
             }
             Section{

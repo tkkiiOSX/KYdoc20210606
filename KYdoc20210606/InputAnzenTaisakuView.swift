@@ -19,6 +19,8 @@ struct InputAnzenTaisakuView: View {
             Section {
                 ForEach(0 ..< data.now_anzen.count, id: \.self) {index in
                     Text(data.now_anzen[index])
+                }.onDelete { offsets in
+                    self.data.now_anzen.remove(atOffsets: offsets)
                 }
             }
             Section {
