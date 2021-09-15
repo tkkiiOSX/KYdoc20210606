@@ -17,6 +17,4 @@ class Data: ObservableObject {
     @Published var dic_anzen: [String] = ["誘導する", "吊荷の下に入らない", "近寄らない"]
     @Published var now_anzen: [String] = []
 
-
-
 }

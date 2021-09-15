@@ -10,18 +10,29 @@ import SwiftUI
 struct InputSgyonaiyouView: View {
     @ObservedObject var data: Data
 
+    @Environment(\.presentationMode) var presentationMode
+
     @State var selNum: Int = 0
     @State var sagyo: String = ""
 
     var body: some View {
         Form {
-            Section {
-                ForEach(0 ..< data.now_sagyo.count,id:\.self) {index in
-                    Text(data.now_sagyo[index])
-                }.onDelete { offsets in
-                    self.data.now_sagyo.remove(atOffsets: offsets)
-                }
-            }
+
+            Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                            UserDefaults.standard.set(data.dic_sagyo, forKey: "DIC_SAGYO")
+                            UserDefaults.standard.set(data.now_name, forKey: "NOW_SAGYO")
+
+                        }) {
+                            Text("保存して戻る")
+                        }
+                        Section {
+                            ForEach(0 ..< data.now_sagyo.count, id: \.self) {index in
+                                Text(data.now_sagyo[index])
+                            }.onDelete { offsets in
+                                self.data.now_name.remove(atOffsets: offsets)
+                            }
+                        }
             Section{
                 Picker(selection: $selNum, label: Text("作業項目をリストから選択")){
                     ForEach(0 ..< data.dic_sagyo.count,id:\.self){index in
