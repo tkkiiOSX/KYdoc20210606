@@ -14,13 +14,15 @@ struct SgyonaiyouView: View {
 
         VStack {
                 Text("作業項目")
-
+                    .frame(maxWidth: .infinity, alignment: .leading)
             ForEach(0 ..< data.now_sagyo.count, id: \.self) {index in
                 Text(data.now_sagyo[index])
             }
 
             NavigationLink(destination: InputSgyonaiyouView(data:data)) {
                     Text("作業項目を選択")
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .foregroundColor(.blue)
                 }
         }
         .font(.title)

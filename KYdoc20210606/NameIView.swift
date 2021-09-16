@@ -12,15 +12,17 @@ struct NameIView: View {
     
     var body: some View {
         VStack {
-            Text("参加者氏名")
-
-            ForEach(0 ..< data.now_name.count, id: \.self) {index in
-                Text(data.now_name[index])
-            }
-
+            Text("参加者氏名（血液型）")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                ForEach(0 ..< data.now_name.count, id: \.self) {index in
+                    Text(data.now_name[index])
+                    
+                }
             NavigationLink(destination: InputNameView(data: data)) {
                 
                 Text("名前を選択")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .foregroundColor(.blue)
             }
         }
         .font(.title)

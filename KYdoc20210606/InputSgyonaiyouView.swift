@@ -21,16 +21,16 @@ struct InputSgyonaiyouView: View {
             Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
                             UserDefaults.standard.set(data.dic_sagyo, forKey: "DIC_SAGYO")
-                            UserDefaults.standard.set(data.now_name, forKey: "NOW_SAGYO")
+                            UserDefaults.standard.set(data.now_sagyo, forKey: "NOW_SAGYO")
 
                         }) {
-                            Text("保存して戻る")
+                            Text("< 保存して戻る")
                         }
                         Section {
                             ForEach(0 ..< data.now_sagyo.count, id: \.self) {index in
                                 Text(data.now_sagyo[index])
                             }.onDelete { offsets in
-                                self.data.now_name.remove(atOffsets: offsets)
+                                self.data.now_sagyo.remove(atOffsets: offsets)
                             }
                         }
             Section{
@@ -58,6 +58,7 @@ struct InputSgyonaiyouView: View {
                 })
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 struct InputSgyonaiyouView_Previews: PreviewProvider {

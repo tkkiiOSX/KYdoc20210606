@@ -14,12 +14,14 @@ struct KikenAridashiView: View {
 
         VStack {
             Text("危険予知項目")
-
+                .frame(maxWidth: .infinity, alignment: .leading)
             ForEach(0 ..< data.now_kiken.count, id: \.self) {index in
                 Text(data.now_kiken[index])
             }
             NavigationLink(destination: InputKikenAridashiIView(data: data)) {
                 Text("危険予知項目を選択")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .foregroundColor(.blue)
             }
         }
         .font(.title)

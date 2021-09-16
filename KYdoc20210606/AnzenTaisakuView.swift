@@ -13,12 +13,15 @@ struct AnzenTaisakuView: View {
     var body: some View {
         VStack {
             Text("安全対策項目")
-
+                .frame(maxWidth: .infinity, alignment: .leading)
             ForEach(0 ..< data.now_anzen.count, id: \.self) {index in
                             Text(data.now_anzen[index])
+
             }
                 NavigationLink(destination: InputAnzenTaisakuView(data: data)) {
                 Text("安全対策項目を選択")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .foregroundColor(.blue)
             }
         }
         .font(.title)

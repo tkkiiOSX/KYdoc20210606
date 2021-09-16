@@ -23,7 +23,7 @@ struct InputNameView: View {
                 UserDefaults.standard.set(data.now_name, forKey: "NOW_NAME")
 
             }) {
-                Text("保存して戻る")
+                Text("< 保存して戻る")
             }
             Section {
                 ForEach(0 ..< data.now_name.count, id: \.self) {index in

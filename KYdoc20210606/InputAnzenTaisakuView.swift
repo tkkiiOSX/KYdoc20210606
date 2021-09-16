@@ -10,12 +10,20 @@ import SwiftUI
 struct InputAnzenTaisakuView: View {
         @ObservedObject var data: Data
 
+        @Environment(\.presentationMode) var presentationMode
+
         @State var selNum: Int = 0
         @State var anzen: String = ""
 
     var body: some View {
-
         Form {
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+                UserDefaults.standard.set(data.dic_name, forKey: "DIC_ANZEN")
+                UserDefaults.standard.set(data.now_name, forKey: "NOW_ANZEN")
+            }) {
+                Text("< 保存して戻る")
+            }
             Section {
                 ForEach(0 ..< data.now_anzen.count, id: \.self) {index in
                     Text(data.now_anzen[index])
@@ -49,6 +57,7 @@ struct InputAnzenTaisakuView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
