@@ -9,19 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var data = Data()
-    
     @State var nichiji: Date = Date()
 
-    //@State var nameData: String = ""
-
-    @State var tourokuname: [String] = [
-    ]
-    @State var nameData: [String] = [
-        "岡本太郎",
-        "黒澤明"
-    ]
-    
-    
     var dateF: DateFormatter {
         let f = DateFormatter()
         f.dateStyle = .short
@@ -32,7 +21,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Form {
+            VStack {
                 HStack {
                     Text("日時")
                     Text(dateF.string(from: nichiji))
